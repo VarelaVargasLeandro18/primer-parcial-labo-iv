@@ -1,0 +1,52 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Países</span>
+            </h4>
+            <app-tabla-paises (onSeleccionPais)="elegirPais($event)" ></app-tabla-paises>
+        </div>
+
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Alta Actor</h4>
+            <form class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">Codigo</label>
+                        <input type="text" class="form-control" [(ngModel)]="codigo" name="codigo" placeholder="" value="" required>
+                     </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Descripcion</label>
+                        <input type="text" class="form-control" [(ngModel)]="descripcion" name="descripcion" placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Precio</label>
+                        <input type="number" step="0.1" class="form-control" [(ngModel)]="precio" name="precio" placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Stock</label>
+                        <input type="number" step="0.1" class="form-control" [(ngModel)]="stock" name="stock" placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Comestible</label>
+                        <input type="checkbox" [(ngModel)]="comestible" name="comestible" placeholder="" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                        <label for="country">Pais</label>
+                        <input type="text" readonly=true class="form-control" [(ngModel)]="pais" name="pais" placeholder="Elegir de la tabla de países" required>
+                    </div>
+
+                </div>
+                
+                <button class="btn btn-primary btn-lg btn-block" type="submit" (click)="guardarProducto()" >Cargar Producto</button>
+            </form>
+            <span class="text-success">{{this.success}}</span>
+            <span class="text-danger">{{this.error}}</span>
+        </div>
+    </div>
+
+</div>
