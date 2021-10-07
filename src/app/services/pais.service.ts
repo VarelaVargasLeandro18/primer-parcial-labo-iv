@@ -17,7 +17,9 @@ export class PaisService {
   }
 
   getPaisByName(name: string) {
-    return this.http.get("https://restcountries.com/v3.1/name/"+name+"?fields=name,flags")
+    return this.http.get("https://restcountries.com/v3.1/name/"+name+"?fields=name,flags").pipe( 
+      map( (paises : any) => paises.map( ( pais : any ) => new Pais( pais.name.common, pais.flags.png ) ) ) 
+    )
   }
   
 }
