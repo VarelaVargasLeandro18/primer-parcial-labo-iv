@@ -12,6 +12,9 @@ import { BienvenidaComponent } from './components/bienvenida/bienvenida.componen
 import { HttpClientModule } from '@angular/common/http';
 import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.component';
 import { AltaProductoComponent } from './components/alta-producto/alta-producto.component';
+import { ListadoProductosComponent } from './components/listado-productos/listado-productos.component';
+import { ProductoComponent } from './components/producto/producto.component';
+import { ProductoDetalleComponent } from './components/producto-detalle/producto-detalle.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { AltaProductoComponent } from './components/alta-producto/alta-producto.
     NavigationComponent,
     BienvenidaComponent,
     TablaPaisesComponent,
-    AltaProductoComponent
+    AltaProductoComponent,
+    ListadoProductosComponent,
+    ProductoComponent,
+    ProductoDetalleComponent
   ],
   imports: [
     BrowserModule,

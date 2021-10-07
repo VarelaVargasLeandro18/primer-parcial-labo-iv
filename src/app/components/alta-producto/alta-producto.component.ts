@@ -39,6 +39,7 @@ export class AltaProductoComponent implements OnInit {
       this.stock === 0 || !this.pais 
     ) {
       this.error = "FALTAN DATOS!";
+      return
     }
 
     const producto = new Producto (

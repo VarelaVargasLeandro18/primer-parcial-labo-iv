@@ -1,0 +1,8 @@
+<ul class="list-group">
+    <li (click)="onElegirProducto(producto)" class="list-group-item lh-condensed "
+        *ngFor="let producto of Productoes">
+        <span>{{producto.codigo}}</span>
+        -
+        <span>{{producto.descripcion}}</span>
+    </li>
+</ul>

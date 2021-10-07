@@ -1,0 +1,8 @@
+<div *ngIf="producto">
+    <span>{{producto.codigo}} </span>
+    <span>{{producto.descripcion}}</span>
+    <span>{{producto.precio}}</span>
+    <span>{{producto.stock}}</span>
+    <span>{{producto.pais}}</span>
+    <span *ngIf="producto.comestible">Es comestible!</span>
+</div>
