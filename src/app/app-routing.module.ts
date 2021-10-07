@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ABMContainerComponent } from './components/abmcontainer/abmcontainer.component';
 import { AltaProductoComponent } from './components/alta-producto/alta-producto.component';
 import { BienvenidaComponent } from './components/bienvenida/bienvenida.component';
 import { LoginComponent } from './components/login/login.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   {path:'bienvenido', component:BienvenidaComponent},
   {path:'altaProducto', component:AltaProductoComponent},
   {path:'productoDetalle', component:ProductoDetalleComponent},
+  {path:'ABMContainer', component:ABMContainerComponent},
   {path:'', pathMatch:'full', redirectTo:'bienvenido'}
 ];
 

@@ -8,6 +8,7 @@
       <a *ngIf="!usuario" class="nav-link rounded border border-black" routerLink="login">Iniciar Sesión</a>
       <a *ngIf="usuario" class="nav-link rounded border border-black" routerLink="altaProducto">Alta Producto</a>
       <a *ngIf="usuario" class="nav-link rounded border border-black" routerLink="productoDetalle">Ver Productos con Detalle</a>
+      <a *ngIf="usuario && usuario.admin" class="nav-link rounded border border-black" routerLink="ABMContainer">Containers</a>
       <button *ngIf="usuario" (click)="onLogOut()" class="btn btn-lg btn-danger" > <i class="fas fa-sign-out-alt"></i> Log Out</button>
     </nav>
 </header>

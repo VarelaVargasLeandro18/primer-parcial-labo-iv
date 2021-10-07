@@ -1,0 +1,25 @@
+<div *ngIf="container" class="col">
+    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+      <div class="card-header py-3 text-white bg-primary border-primary">
+        <h4 class="my-0 fw-normal">Modificar Container</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+            <li>
+                <label for="firstName">Codigo</label>
+                <input type="text" class="form-control" [(ngModel)]="container.codigo" name="codigo" placeholder="" value="" required>
+            </li>
+          <li>
+            <label for="firstName">Capacidad</label>
+            <input type="text" class="form-control" [(ngModel)]="container.capacidad" name="capacidad" placeholder="" value="" required>
+          </li>
+          <li>
+            <label for="firstName">Marca</label>
+            <input type="text" class="form-control" [(ngModel)]="container.marca" name="marca" placeholder="" value="" required>
+          </li>
+        </ul>
+        <button (click)="modificar()" type="button" class="w-100 btn btn-lg btn-primary">Modificar</button>
+      </div>
+    </div>
+  </div>

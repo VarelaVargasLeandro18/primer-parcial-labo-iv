@@ -35,10 +35,14 @@ export class AltaProductoComponent implements OnInit {
     this.error = '';
 
     if ( 
-      !this.codigo || !this.descripcion || this.precio === 0 ||
-      this.stock === 0 || !this.pais 
+      !this.codigo || !this.descripcion || !this.pais 
     ) {
       this.error = "FALTAN DATOS!";
+      return
+    }
+
+    if ( this.precio <= 0 || this.stock <= 0 ) {
+      this.error = "NO PUEDEN HABER VALORES NUMÉRICOS NEGATIVOS";
       return
     }
 

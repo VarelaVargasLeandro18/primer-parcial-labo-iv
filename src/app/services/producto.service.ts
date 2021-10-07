@@ -21,7 +21,7 @@ export class ProductoService {
   altaProducto ( producto : Producto ) {
     return this.db.alta(producto);
   }
-//,(código, descripción , precio , stock, país de origen,comestible (true o false)).
+  
   leer () {
     return this.db.leer().pipe( 
       map( snapshots => snapshots.docs.map( doc => new Producto( 
