@@ -30,12 +30,12 @@ export class ContainerService {
   }
 
   borrarContainer( codigo? : string ) {
-    //return this.firestore.collection<Container>(this.collection).ref.where( 'codigo', '==', codigo );
+    return this.firestore.collection<Container>(this.collection).ref.where( 'codigo', '==', codigo ).get().then( data => data.forEach( doc => doc.ref.delete() ) );
   }
 
   modificarContainer( container? : Container ) {
     if ( !container ) return;
-    //return this.firestore.collection<Container>(this.collection).ref.where( 'codigo', '==', codigo );
+    return this.firestore.collection<Container>(this.collection).ref.where( 'codigo', '==', container.codigo ).get().then( data => data.forEach( doc => doc.ref.update({...container}) ) );
   }
 
 }
